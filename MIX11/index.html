@@ -10,9 +10,9 @@
 <p>First Name: <input data-bind="value: firstName" /></p>
 <p>Last Name: <input data-bind="value: lastName" /></p>
 
-<h2>Friends</h2>
+<h2>Friends (<span data-bind="text: friends().length"></span>)</h2>
 <button data-bind="click: addFriend">Add friend</button>
-<div data-bind="template: {name:'friendsTemplate', foreach:friends}"></div>
+<ul data-bind="template: {name:'friendsTemplate', foreach:friends}"></ul>
 
 <script id="friendsTemplate" type="text/html">
 <li>
