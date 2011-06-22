@@ -5,10 +5,11 @@
 <body>
 <h3>Details</h3>
 <p>First Name: <span data-bind="text: firstName"></span></p>
+<p>First Name: <input data-bind="value: firstName" /></p>
 
 <script type="text/javascript">
   var viewModel = {
-    firstName : "Bert"
+    firstName : ko.observable("Bert")
   };
   ko.applyBindings(viewModel);
 </script>
