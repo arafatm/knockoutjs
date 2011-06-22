@@ -11,7 +11,7 @@
 <p>Last Name: <input data-bind="value: lastName" /></p>
 
 <h2>Friends (<span data-bind="text: friends().length"></span>)</h2>
-<button data-bind="click: addFriend">Add friend</button>
+<button data-bind="click: addFriend, enable: friends().length < 5">Add friend</button>
 <ul data-bind="template: {name:'friendsTemplate', foreach:friends}"></ul>
 
 <script id="friendsTemplate" type="text/html">
