@@ -12,14 +12,10 @@
 
 <h2>Friends</h2>
 <button data-bind="click: addFriend">Add friend</button>
-<div data-bind="template: 'friendsTemplate'"></div>
+<div data-bind="template: {name:'friendsTemplate', foreach:friends}"></div>
 
 <script id="friendsTemplate" type="text/html">
-<ul>
-{{each(index, friend) friends}}
-<li>${ friend.name } - ${ new Date }</li>
-{{/each}}
-</ul>
+<li>${ $data.name } - ${ new Date }</li>
 </script>
 
 
