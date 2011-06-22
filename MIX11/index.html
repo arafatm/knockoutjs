@@ -6,10 +6,13 @@
 <h3>Details</h3>
 <p>First Name: <span data-bind="text: firstName"></span></p>
 <p>First Name: <input data-bind="value: firstName" /></p>
+<p>Last Name: <span data-bind="text: lastName"></span></p>
+<p>Last Name: <input data-bind="value: lastName" /></p>
 
 <script type="text/javascript">
   var viewModel = {
-    firstName : ko.observable("Bert")
+    firstName : ko.observable("Bert"),
+    lastName : ko.observable("Smith"),
   };
   ko.applyBindings(viewModel);
 </script>
