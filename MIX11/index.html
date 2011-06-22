@@ -3,6 +3,15 @@
 <script src="scripts/knockout-1.2.1.js" type="text/javascript"></script>
 </head>
 <body>
+<h3>Details</h3>
+<p>First Name: <span data-bind="text: firstName"></span></p>
+
+<script type="text/javascript">
+  var viewModel = {
+    firstName : "Bert"
+  };
+  ko.applyBindings(viewModel);
+</script>
 </body>
 
 </html>
